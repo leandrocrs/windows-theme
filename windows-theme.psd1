@@ -74,7 +74,7 @@ FunctionsToExport = '*'
 CmdletsToExport = @()
 
 # Variables to export from this module
-VariablesToExport = $()
+VariablesToExport = @()
 
 # Aliases to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no aliases to export.
 AliasesToExport = '*'
@@ -95,13 +95,12 @@ PrivateData = @{
 
         # Tags applied to this module. These help with module discovery in online galleries.
         Tags = @(
-            'windows theme',
             'theme',
             'light',
             'dark',
-            'personalization',
+            'Personalization',
             'Windows',
-            'windows 10'
+            'Windows10'
         )
 
         # A URL to the license for this module.
