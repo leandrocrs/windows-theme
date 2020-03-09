@@ -1,4 +1,4 @@
-$keyPath = 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize'
+﻿$keyPath = 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize'
 $appsThemeKeyName = 'AppsUseLightTheme'
 $systemThemeKeyName = 'SystemUsesLightTheme'
 
@@ -11,7 +11,12 @@ Function themeToRegistryValue {
         [string] $theme
     )
 
-    return (($theme -eq $lightTheme) ? 1 : 0)
+    if ($theme -eq $lightTheme) {
+        1
+    } 
+    else {
+        0
+    }
 }
 
 Function registryValueToTheme {
@@ -20,7 +25,11 @@ Function registryValueToTheme {
         [int] $value
     )
 
-    return (($value -eq 1) ? $lightTheme : $darkTheme)
+    if ($value -eq 1) {
+        $lightTheme
+    } else {
+        $darkTheme
+    }
 }
 
 Function Get-PersonalizeRegistry {
@@ -28,7 +37,7 @@ Function Get-PersonalizeRegistry {
         [string] $Key
     )
 
-    return (Get-ItemProperty -Path $keyPath -Name $Key).($Key);    
+    return (Get-ItemProperty -Path $keyPath -Name $Key).($Key);
 }
 
 Function Set-PersonalizeRegistry {
@@ -63,7 +72,7 @@ Function Set-WindowsSystemTheme {
         [string] $value
     )
 
-    Set-PersonalizeRegistry -Key $systemThemeKeyName -Value (themeToRegistryValue $value)    
+    Set-PersonalizeRegistry -Key $systemThemeKeyName -Value (themeToRegistryValue $value)
 }
 
 Function Get-WindowsTheme {
@@ -104,7 +113,7 @@ Function Use-WindowsDarkTheme {
     Set-WindowsTheme -Apps $darkTheme -System $darkTheme
 }
 
-Set-Alias -Name 'win-theme-default' -Value Use-WindowsDefaultTheme 
+Set-Alias -Name 'win-theme-default' -Value Use-WindowsDefaultTheme
 Set-Alias -Name 'win-theme-inverted' -Value Use-WindowsInvertedTheme
 Set-Alias -Name 'win-theme-light' -Value Use-WindowsLightTheme
 Set-Alias -Name 'win-theme-dark' -Value Use-WindowsDarkTheme
@@ -130,4 +139,4 @@ $moduleMember = @{
     )
 }
 
-Export-ModuleMember @moduleMember
+# Export-ModuleMember @moduleMember
