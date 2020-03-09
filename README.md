@@ -1,6 +1,8 @@
 # windows-theme
 > Powershell module to easily switch between Windows 10 Light and Dark themes.
 
+![windows-theme logo](./assets/icon.png "windows-theme logo, a square sliced in two pieces, one light and other dark colored")
+
 ## Requirements
 * Windows 10
 * Powershell version 5 or higher or Powershell core
@@ -21,11 +23,29 @@ win-theme-default # enable default theme (dark bar, light apps). Same as Use-Win
 win-theme-inverted # enable inverted theme (light bar, dark apps). Same as Use-WindowsInvertedTheme
 win-theme-light # enable light theme. Same as Use-WindowsLightTheme
 win-theme-dark # enable dark theme. Same as Use-WindowsDarkTheme
-Set-WindowsTheme # set -System and -Apps theme separately
+Set-WindowsTheme -System dark -Apps light # set -System and -Apps theme separately
 Get-WindowsAppsTheme # show theme in use for apps
-Set-WindowsAppsTheme # set theme for apps only
+Set-WindowsAppsTheme dark # set theme for apps only
 Get-WindowsSystemTheme # show theme in use for system only
-Set-WindowsSystemTheme # set theme for system only
+Set-WindowsSystemTheme light # set theme for system only
 ```
 
 Possible values for params are: `light` or `dark`.
+
+## Themes
+
+### win-theme-default
+
+![print of windows with win-theme-default applied](./assets/win-theme-default.png "Windows print with dark taskbar and light theme for apps")
+
+### win-theme-light
+
+![print of windows with win-theme-light applied](./assets/win-theme-light.png "Windows print with light theme for taskbar and apps")
+
+### win-theme-dark
+
+![print of windows with win-theme-dark applied](./assets/win-theme-dark.png "Windows print with dark theme for taskbar and apps")
+
+### win-theme-inverted
+
+![print of windows with win-theme-inverted applied](./assets/win-theme-inverted.png "Windows print with light taskbar and dark theme for apps")
