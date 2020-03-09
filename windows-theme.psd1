@@ -11,10 +11,10 @@
 RootModule = 'windows-theme.psm1'
 
 # Version number of this module.
-ModuleVersion = '1.1'
+ModuleVersion = '1.1.1'
 
 # Supported PSEditions
-# CompatiblePSEditions = @()
+CompatiblePSEditions = @('Desktop', 'Core')
 
 # ID used to uniquely identify this module
 GUID = 'bd01ce38-59c0-4ac2-8dfe-c167bae06d91'
@@ -32,7 +32,7 @@ Copyright = '(c) Leandro Cavalcante. All rights reserved.'
 Description = 'Powershell module to easily switch between Windows 10 Light and Dark themes.'
 
 # Minimum version of the PowerShell engine required by this module
-PowerShellVersion = '5.0.0'
+PowerShellVersion = '5.1'
 
 # Name of the PowerShell host required by this module
 # PowerShellHostName = ''
@@ -126,7 +126,7 @@ PrivateData = @{
         ProjectUri = 'https://github.com/leandrocrs/windows-theme'
 
         # A URL to an icon representing this module.
-        IconUri = 'https://github.com/leandrocrs/windows-theme/blob/master/assets/icon.png'
+        IconUri = 'https://github.com/leandrocrs/windows-theme/raw/master/assets/icon.png'
 
         # ReleaseNotes of this module
         # ReleaseNotes = ''
