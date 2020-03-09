@@ -126,7 +126,7 @@ PrivateData = @{
         ProjectUri = 'https://github.com/leandrocrs/windows-theme'
 
         # A URL to an icon representing this module.
-        # IconUri = ''
+        IconUri = 'https://github.com/leandrocrs/windows-theme/blob/master/assets/icon.png'
 
         # ReleaseNotes of this module
         # ReleaseNotes = ''
