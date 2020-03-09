@@ -27,4 +27,4 @@ jobs:
         shell: pwsh
         env:
           DEPLOY_KEY: ${{ secrets.PSGALLERY_KEY }}
-        run: Publish-Module -NuGetApiKey $env:DEPLOY_KEY -Path $env:GITHUB_WORKSPACE -Verbose
+        run: Publish-Module -NuGetApiKey $env:DEPLOY_KEY -Force -Path $env:GITHUB_WORKSPACE -Verbose
