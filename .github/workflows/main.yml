@@ -26,6 +26,5 @@ jobs:
       - name: deploy to PSGallery
         shell: pwsh
         env:
-          PROJECT: /windows-theme
           DEPLOY_KEY: ${{ secrets.PSGALLERY_KEY }}
-        run: Publish-Module -NuGetApiKey $env:DEPLOY_KEY -Path $env:GITHUB_WORKSPACE/$env:PROJECT -Verbose
+        run: Publish-Module -NuGetApiKey $env:DEPLOY_KEY -Path $env:GITHUB_WORKSPACE -Verbose
