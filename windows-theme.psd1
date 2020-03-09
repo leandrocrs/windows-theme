@@ -23,7 +23,7 @@ GUID = 'bd01ce38-59c0-4ac2-8dfe-c167bae06d91'
 Author = 'Leandro Cavalcante'
 
 # Company or vendor of this module
-CompanyName = 'Unknown'
+CompanyName = 'leandrocrs.me'
 
 # Copyright statement for this module
 Copyright = '(c) Leandro Cavalcante. All rights reserved.'
@@ -68,7 +68,18 @@ PowerShellVersion = '5.0.0'
 # NestedModules = @()
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport = '*'
+FunctionsToExport = @(
+    'Get-WindowsTheme',
+    'Set-WindowsTheme',
+    'Get-WindowsAppsTheme',
+    'Set-WindowsAppsTheme',
+    'Get-WindowsSystemTheme',
+    'Set-WindowsSystemTheme',
+    'Use-WindowsDefaultTheme',
+    'Use-WindowsInvertedTheme',
+    'Use-WindowsLightTheme',
+    'Use-WindowsDarkTheme'
+)
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 CmdletsToExport = @()
@@ -77,7 +88,12 @@ CmdletsToExport = @()
 VariablesToExport = @()
 
 # Aliases to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no aliases to export.
-AliasesToExport = '*'
+AliasesToExport = @(
+    'win-theme-default',
+    'win-theme-inverted',
+    'win-theme-light',
+    'win-theme-dark'
+)
 
 # DSC resources to export from this module
 # DscResourcesToExport = @()
