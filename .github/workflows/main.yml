@@ -25,5 +25,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: deploy to PSGallery
         env:
-            PSGALLERY_DEPLOY_KEY: ${{ secrets.PSGALLERY_KEY }}
-        run: docker run mcr.microsoft.com/powershell Publish-Module -NuGetApiKey $env:PSGALLERY_DEPLOY_KEY -Path $env:GITHUB_WORKSPACE/windows-theme -Verbose
+          PROJECT: /windows-theme
+          PSGALLERY_DEPLOY_KEY: ${{ secrets.PSGALLERY_KEY }}
+        run: 'docker run mcr.microsoft.com/powershell -e PROJECT=$env:PROJECT -e DEPLOY_KEY=$env:PSGALLERY_DEPLOY_KEY -v=$env:GITHUB_WORKSPACE/windows-theme:$env:$PROJECT "Publish-Module -NuGetApiKey $env:DEPLOY_KEY -Path $env:PROJECT -Verbose"'
