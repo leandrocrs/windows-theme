@@ -2,6 +2,7 @@
 > Powershell module to easily switch between Windows 10 Light and Dark themes.
 
 ![CI](https://github.com/leandrocrs/windows-theme/workflows/CI/badge.svg?branch=master)
+![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/windows-theme.svg)
 
 ![windows-theme logo](./assets/icon.png "windows-theme logo, a square sliced in two pieces, one light and other dark colored")
 
